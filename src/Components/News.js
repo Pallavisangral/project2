@@ -40,7 +40,7 @@ export class News extends Component {
     
     let url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=a1eadc5544984df19cf4221cad1d9f26&page=${this.state.page +1}&pageSize=20`;
     let data= await fetch(url);
-    let parsedData= await data.json()
+    let parsedData= await data.json();
     console.log(parsedData);
     
     this.setState({
@@ -55,8 +55,8 @@ export class News extends Component {
 		return (
       
 			<div className="container my-3">
-				<h2>Indian Express- Latest News</h2>
-
+        <h1 className = "text-center">Indian Express- Latest News</h1>
+				
 				<div className="row">
 					{this.state.articles.map((element)=>{
 					   return <div className="col-md-4" key={element.url}>
